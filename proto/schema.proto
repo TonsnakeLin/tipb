@@ -16,6 +16,13 @@ message TableInfo {
 	repeated ColumnInfo columns = 2;
 }
 
+message TableInfoDetail {
+	optional int64 table_id = 1 [(gogoproto.nullable) = false];
+	repeated ColumnInfo columns = 2;
+	repeated int64 primary_column_ids = 4;
+	repeated int64 primary_prefix_column_ids = 7;
+}
+
 message ColumnInfo {
 	optional int64 column_id = 1 [(gogoproto.nullable) = false];
 	optional int32 tp = 2 [(gogoproto.nullable) = false]; // MySQL type.
@@ -33,6 +40,13 @@ message IndexInfo {
 	optional int64 index_id = 2 [(gogoproto.nullable) = false];
 	repeated ColumnInfo columns = 3;
 	optional bool unique = 4 [(gogoproto.nullable) = false];
+}
+
+message IndexInfoDetail {
+	optional int64 table_id = 1 [(gogoproto.nullable) = false];
+	optional int64 index_id = 2 [(gogoproto.nullable) = false];
+	repeated ColumnInfo columns = 3;
+	repeated int64 primary_column_ids = 6;
 }
 
 // KeyRange is the encoded index key range, low is closed, high is open. (low <= x < high)
