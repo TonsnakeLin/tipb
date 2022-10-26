@@ -57,7 +57,6 @@ It has these top-level messages:
 	WindowFrameBound
 	WindowFrame
 	Window
-	PointGet
 	ExplainData
 	ExplainOperator
 	AccessObject
@@ -87,6 +86,7 @@ It has these top-level messages:
 	ChunkMemoryLayout
 	UserIdentity
 	StreamResponse
+	PointGet
 	TopSQLRecord
 	TopSQLRecordItem
 	SQLMeta
