@@ -247,3 +247,9 @@ message Window {
 	optional WindowFrame frame = 4;
 	optional Executor child = 5;
 }
+
+message PointGet {
+	optional TableInfoDetail read_table = 1;
+	optional IndexInfoDetail read_index = 2;
+}
+

@@ -57,6 +57,7 @@ It has these top-level messages:
 	WindowFrameBound
 	WindowFrame
 	Window
+	PointGet
 	ExplainData
 	ExplainOperator
 	AccessObject
