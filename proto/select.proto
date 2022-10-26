@@ -170,5 +170,6 @@ message PointGet {
 	optional EncodeType encode_type = 1 [(gogoproto.nullable) = false];
 	optional TableInfoDetail read_table = 2;
 	optional IndexInfoDetail read_index = 3;
+	repeated uint32 output_offsets = 4;
 }
 
